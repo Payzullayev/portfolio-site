@@ -303,7 +303,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="max-w-4xl mx-auto py-20 text-center">
+      <section id="contact" className="max-w-4xl mx-auto py-20 text-center relative z-10">
 
         <h2 className="text-3xl font-bold mb-6">
           Contact Me
