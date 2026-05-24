@@ -1,6 +1,41 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white px-6 overflow-hidden relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+
+  {[...Array(80)].map((_, i) => (
+    <div
+      key={i}
+      className="absolute rounded-full"
+      style={{
+        width: `${Math.random() * 40 + 10}px`,
+        height: `${Math.random() * 40 + 10}px`,
+
+        background: `
+          radial-gradient(circle,
+          rgba(${150 + Math.random() * 100},
+          ${Math.random() * 100},
+          255,
+          0.8) 0%,
+          transparent 70%)
+        `,
+
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+
+        filter: "blur(8px)",
+
+        animation: `float ${Math.random() * 20 + 10}s ease-in-out infinite`,
+      }}
+    />
+  ))}
+
+</div>
+      <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500/20 rounded-full blur-[140px] animate-pulse"></div>
+
+<div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-[140px] animate-pulse"></div>
+
+<div className="absolute top-[40%] left-[35%] w-72 h-72 bg-blue-500/10 rounded-full blur-[120px] animate-bounce"></div>
 
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500 rounded-full blur-[120px] opacity-20"></div>
@@ -10,7 +45,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(120,119,198,0.15),transparent_40%)]"></div>
 
       {/* Navbar */}
-      <nav className="max-w-6xl mx-auto flex justify-between items-center py-6 px-6 sticky top-4 z-50 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl">
+      <nav className="max-w-6xl mx-auto flex justify-between items-center py-5 px-8 sticky top-6 z-50 backdrop-blur-3xl bg-black/40 border border-purple-500/20 rounded-[30px] shadow-[0_0_40px_rgba(168,85,247,0.25)]">
         <h1 className="text-2xl font-bold">
           Sardorjon.dev
         </h1>
@@ -64,29 +99,47 @@ export default function Home() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
 
-          <span className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-purple-500 transition duration-300 shadow-xl hover:shadow-purple-500/20 hover:shadow-2xl">
-            HTML
-          </span>
+          <a
+  href="/html"
+  className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-orange-400 transition duration-300 shadow-xl hover:shadow-orange-500/20 hover:shadow-2xl block"
+>
+  HTML
+</a>
 
-          <span className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-purple-500 transition duration-300 shadow-xl hover:shadow-purple-500/20 hover:shadow-2xl">
-            CSS
-          </span>
+          <a
+  href="/css"
+  className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-cyan-400 transition duration-300 shadow-xl hover:shadow-cyan-500/20 hover:shadow-2xl block"
+>
+  CSS
+</a>
 
-          <span className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-purple-500 transition duration-300 shadow-xl hover:shadow-purple-500/20 hover:shadow-2xl">
-            JavaScript
-          </span>
+          <a
+  href="/javascript"
+  className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-yellow-400 transition duration-300 shadow-xl hover:shadow-yellow-500/20 hover:shadow-2xl block"
+>
+  JavaScript
+</a>
 
-          <span className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-purple-500 transition duration-300 shadow-xl hover:shadow-purple-500/20 hover:shadow-2xl">
-            React
-          </span>
+          <a
+  href="/react"
+  className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-cyan-400 transition duration-300 shadow-xl hover:shadow-cyan-500/20 hover:shadow-2xl block"
+>
+  React
+</a>
 
-          <span className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-purple-500 transition duration-300 shadow-xl hover:shadow-purple-500/20 hover:shadow-2xl">
-            Next.js
-          </span>
+          <a
+  href="/nextjs"
+  className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-white transition duration-300 shadow-xl hover:shadow-white/20 hover:shadow-2xl block"
+>
+  Next.js
+</a>
 
-          <span className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-purple-500 transition duration-300 shadow-xl hover:shadow-purple-500/20 hover:shadow-2xl">
-            Tailwind CSS
-          </span>
+          <a
+  href="/tailwind"
+  className="bg-zinc-900/80 backdrop-blur-lg border border-zinc-800 px-5 py-4 rounded-2xl hover:-translate-y-2 hover:border-cyan-400 transition duration-300 shadow-xl hover:shadow-cyan-500/20 hover:shadow-2xl block"
+>
+  Tailwind CSS
+</a>
 
         </div>
 
@@ -117,9 +170,12 @@ export default function Home() {
               Modern AI chatbot platform with premium UI.
             </p>
 
-            <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition duration-300">
-              View Project
-            </button>
+            <a
+  href="/ai-chat-app"
+  className="inline-block bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition duration-300"
+>
+  View Project
+</a>
 
           </div>
 
@@ -161,9 +217,12 @@ export default function Home() {
               Personal modern animated portfolio website.
             </p>
 
-            <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition duration-300">
-              View Project
-            </button>
+            <a
+  href="/portfolio-website"
+  className="inline-block bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition duration-300"
+>
+  View Project
+</a>
 
           </div>
 
@@ -172,8 +231,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="max-w-5xl mx-auto py-20 relative z-10">
-
+      <section className="max-w-5xl mx-auto py-20">
         <h2 className="text-3xl font-bold mb-10 text-center">
           About Me
         </h2>
@@ -196,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="max-w-6xl mx-auto py-20 relative z-10">
+      <section id="projects" className="max-w-6xl mx-auto py-20">
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 
@@ -245,7 +303,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section className="max-w-4xl mx-auto py-20 text-center relative z-10">
+      <section id="contact" className="max-w-4xl mx-auto py-20 text-center">
 
         <h2 className="text-3xl font-bold mb-6">
           Contact Me
@@ -281,5 +339,7 @@ export default function Home() {
       </footer>
 
     </main>
+    
+    
   );
 }
