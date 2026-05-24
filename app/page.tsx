@@ -316,14 +316,14 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-5 justify-center">
 
           <a
-  href="tel:+998880749699"
+  href="tel:+998 88 074 96 99"
   className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition duration-300 shadow-lg shadow-white/10"
 >
   Phone
 </a>
 
           <a
-            href="mailto:example@gmail.com"
+            href="mailto:sardorjonpayzullayev4@gmail.com"
             className="border border-white px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition duration-300"
           >
             Email Me
